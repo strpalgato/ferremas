@@ -8,10 +8,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Producto</title>
-    <!-- Agrega el enlace al archivo CSS de Tailwind -->
+    <!-- Agrega el Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Agrega el enlace al archivo JS de SweetAlert2 -->
+    <!-- Agrega el SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Añadir SDK de PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AU7UuZz8cNzUmq63iXoiprTaKLEP_8kGvsi3IL-i0y_dBrj93i26wiCMOVJFJdnrhCs7iRd_U3f8PxIs"></script>
     
     </head>
     <body class="flex justify-center items-center h-screen bg-gray-100">
@@ -71,8 +73,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <input type="text" id="productIdToDelete" name="productIdToDelete" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500">
                 <button type="button" onclick="eliminarProducto()" class="mt-2 w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Eliminar Producto</button>
             </form>
+            <div id="paypal-button-container" class="flex justify-center mt-4"></div>
         </div>
-
+        
         <script src="forms.js"></script>
+        <script src="paypal.js"></script>
     </body>
 </html>
